@@ -6,10 +6,10 @@ begin
   Jeweler::Tasks.new do |s|
     s.name = "shoulda_generator"
     s.summary = "Generators which create tests using shoulda"
-    s.email = "josh@technicalpickles.com"
-    s.homepage = "http://github.com/technicalpickles/shoulda_generator"
+    s.email = "jlee42@gmail.com"
+    s.homepage = "http://github.com/jeffleeismyhero/shoulda_generator"
     s.description = "Generators which create tests using shoulda"
-    s.authors = ["Josh Nichols"]
+    s.authors = ["Josh Nichols", "Jeffrey Lee"]
     s.files =  FileList["[A-Z]*", "{rails_generators,lib,test}/**/*"]
   end
 rescue LoadError
