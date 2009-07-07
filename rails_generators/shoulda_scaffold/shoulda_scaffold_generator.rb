@@ -103,8 +103,6 @@ class ShouldaScaffoldGenerator < Rails::Generator::NamedBase
       m.directory(File.join('test/functional', controller_class_path))
       m.directory(File.join('test/unit', class_path))
 
-      m.directory('public/stylesheets/blueprint')
-
       for view in scaffold_views
         m.template(
           "#{templating}/#{view}.html.#{templating}",
