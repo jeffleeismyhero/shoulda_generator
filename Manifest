@@ -6,11 +6,7 @@ rails_generators/shoulda_model/templates/model.rb
 rails_generators/shoulda_model/templates/unit_test.rb
 rails_generators/shoulda_model/USAGE
 rails_generators/shoulda_scaffold/shoulda_scaffold_generator.rb
-rails_generators/shoulda_scaffold/templates/blueprint/ie.css
-rails_generators/shoulda_scaffold/templates/blueprint/print.css
-rails_generators/shoulda_scaffold/templates/blueprint/screen.css
 rails_generators/shoulda_scaffold/templates/controller.rb
-rails_generators/shoulda_scaffold/templates/erb/_form.html.erb
 rails_generators/shoulda_scaffold/templates/erb/edit.html.erb
 rails_generators/shoulda_scaffold/templates/erb/index.html.erb
 rails_generators/shoulda_scaffold/templates/erb/layout.html.erb
