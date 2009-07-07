@@ -16,7 +16,6 @@ class ShouldaModelGeneratorTest < GeneratorTestCase
       assert_generated_migration :create_products do |t|
         assert_generated_column t, :name, :string
         assert_generated_column t, :supplier_id, :integer
-        assert_generated_column t, :created_at, :timestamp
       end
     end
   end

@@ -1,12 +1,14 @@
-<dl>
-<% for attribute in attributes -%>
-  <dt><%= attribute.column.human_name %></dt>
-  <dd><%%= h @<%= singular_name %>.<%= attribute.name %> %></dd>
-<% end -%>
-</dl>
-
-<p>
+<div class="inline-actions">
   <%%= link_to 'Edit', edit_<%= singular_name %>_path(@<%= singular_name %>)%>
   |
   <%%= link_to 'Back', <%= plural_name %>_path %>
-</p>
+</div>
+
+<h1>Listing <%= plural_name.humanize %></h1>
+
+<% for attribute in attributes -%>
+	<p>
+	  <div class="display-label"><%= attribute.column.human_name %></div>
+	  <div class="display-attribute"><%%= h @<%= singular_name %>.<%= attribute.name %> %></div>
+	</p>
+<% end -%>

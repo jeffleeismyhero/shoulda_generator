@@ -1,8 +1,19 @@
+<div class="inline-actions">
+  <%%= link_to 'Back', <%= plural_name %>_path %>
+</div>
+
 <h1>New <%= singular_name.humanize %></h1>
 
-<%% form_for(@<%= singular_name %>) do |form| %>
-  <%%= render :partial => 'form', :locals => {:form => form} %>
-  <p><%%= form.submit 'Create' %></p>
-<%% end %>
+<%% form_for(@<%= singular_name %>) do |f| %>
+	<%%= f.error_messages %>
 
-<p><%%= link_to 'Back', <%= plural_name %>_path %></p>
+	<% for attribute in attributes -%>
+		<fieldset>
+		  <%%= f.label :<%= attribute.name %> %>
+	  	<%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+		</fieldset>
+	<% end -%>
+  <p>
+  	<%%= f.submit 'Create' %>
+  </p>
+<%% end %>

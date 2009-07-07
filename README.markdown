@@ -1,11 +1,12 @@
 # Shoulda generators
 
+I've customized the Shoulda Generator gem from technicalpickles with my own views and defaults. I'm not a fan of haml and will eventually remove it from this fork. I also do not require blueprint so that will be removed as well.
+
 One night at a Boston Ruby hackfest, I finally got sick of using the Rails default generators, and then having to twiddle them to meet my needs and tastes. This includes using things like:
 
  * [shoulda](http://thoughtbot.com/projects/shoulda)
  * [factory\_girl](http://github.com/thoughtbot/factory_girl)
  * [haml](http://haml.hamptoncatlin.com/)
- * [blueprint](http://code.google.com/p/blueprintcss/)
 
 The next morning, I was struck awake at 5am with the inspiration to start implementing it. shoulda\_generator is the result of this effort.
 
@@ -30,9 +31,8 @@ The next morning, I was struck awake at 5am with the inspiration to start implem
 
  * Everything included in shoulda_model
  * A controller (sans unnecessary comments)
- * Choice of [haml](http://haml.hamptoncatlin.com/) (default) or ERB 
+ * Choice of [haml](http://haml.hamptoncatlin.com/) or ERB (default)
    * Specify which with the --templating option
- * Simple layout styled with blueprint
    * Skip using --skip-layout
  * A helper
  * A shoulda functional test using factory_girl factory, using should\_be\_restful or not
@@ -43,7 +43,6 @@ The next morning, I was struck awake at 5am with the inspiration to start implem
  * [shoulda](http://thoughtbot.com/projects/shoulda) installed as a plugin
  * [factory\_girl](http://github.com/thoughtbot/factory_girl) gem installed
  * [factory\_girl\_on\_rails](http://github.com/technicalpickles/factory_girl_on_rails) installed as a plugin
- * [haml](http://haml.hamptoncatlin.com/) gem installed on the system, and the project has been hamlified using  `haml --rails`
 
 ## Getting it
 
@@ -53,7 +52,7 @@ shoulda\_generator is available as a gem via [GitHub](http://github.com). If you
     
 Now you can install it:
     
-    $ sudo gem install technicalpickles-shoulda_generator
+    $ sudo gem install jeffleeismyhero-shoulda_generator
 
 ## Example usage
 
@@ -74,6 +73,6 @@ Here's an example `.shoulda_generator`:
 
 ## Developing it
 
-Source is hosted on GitHub: [http://github.com/technicalpickles/shoulda_generator/tree/master](http://github.com/technicalpickles/shoulda_generator/tree/master)
+Source is hosted on GitHub: [http://github.com/jeffleeismyhero/shoulda_generator/tree/master](http://github.com/jeffleeismyhero/shoulda_generator/tree/master)
 
 You can do the usual fork/commit cycle until you have something ready to share. Send pull requests my way.

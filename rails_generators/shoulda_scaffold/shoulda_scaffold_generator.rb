@@ -4,8 +4,8 @@
 #++
 class ShouldaScaffoldGeneratorConfig
   
-  DEFAULT_TEMPLATING = 'haml'
-  DEFAULT_FUNCTIONAL_TEST_STYLE = 'should_be_restful'
+  DEFAULT_TEMPLATING = 'erb'
+  DEFAULT_FUNCTIONAL_TEST_STYLE = 'basic'
   
   def initialize()
     @config = load_file(config_file)
@@ -115,10 +115,6 @@ class ShouldaScaffoldGenerator < Rails::Generator::NamedBase
       # Layout and stylesheet.
       m.template("#{templating}/layout.html.#{templating}", File.join('app/views/layouts', controller_class_path, "#{controller_file_name}.html.#{templating}"))
 
-      %w(print screen ie).each do |stylesheet|
-        m.template("blueprint/#{stylesheet}.css", "public/stylesheets/blueprint/#{stylesheet}.css")
-      end
-
       m.template(
         'controller.rb', File.join('app/controllers', controller_class_path, "#{controller_file_name}_controller.rb")
       )
@@ -153,13 +149,13 @@ class ShouldaScaffoldGenerator < Rails::Generator::NamedBase
              "Don't add timestamps to the migration file for this model") { |v| options[:skip_timestamps] = v }
       opt.on("--skip-migration",
              "Don't generate a migration file for this model") { |v| options[:skip_migration] = v }
-      opt.on("--templating [erb|haml]", "Specify the templating to use (haml by default)") { |v| options[:templating] = v }
-      opt.on("--functional-test-style [basic|should_be_restful]", "Specify the style of the functional test (should_be_restful by default)") { |v| options[:functional_test_style] = v }
+      opt.on("--templating [erb|haml]", "Specify the templating to use (erb by default)") { |v| options[:templating] = v }
+      opt.on("--functional-test-style [basic|should_be_restful]", "Specify the style of the functional test (basic by default)") { |v| options[:functional_test_style] = v }
       
      end
 
     def scaffold_views
-      %w[ index show new edit _form ]
+      %w[ index show new edit ]
     end
 
     def model_name
