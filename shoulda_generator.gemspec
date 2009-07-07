@@ -61,7 +61,6 @@ Gem::Specification.new do |s|
      "test/fixtures/plugins/default/stubby/generators/stubby_generator/stubby_generator.rb",
      "test/fixtures/plugins/default/stubby/init.rb",
      "test/fixtures/plugins/default/stubby/lib/stubby_mixin.rb",
-     "test/fixtures/tmp/test.log",
      "test/rails_generators/shoulda_model_generator_test.rb",
      "test/shoulda_macros/generator_macros.rb",
      "test/stolen_from_railties.rb",
